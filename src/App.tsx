@@ -138,7 +138,7 @@ function App() {
             title="Shenlle Ai"
             description="A Whatsapp-based interactive solar system keeper"
             image="https://files.catbox.moe/30zmdf.jpeg"
-            link="https://wa.me/628319718038"
+            link="https://wa.me/6283197180383"
           />
           <ProjectCard
             title="Chizzy Chat"
