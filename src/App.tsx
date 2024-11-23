@@ -6,6 +6,9 @@ import { FloatingAstronaut } from './components/FloatingAstronaut';
 import { ProjectCard } from './components/ProjectCard';
 import { OrbitingPlanets } from './components/OrbitingPlanets';
 import { FloatingLanguages } from './components/FloatingLanguages';
+import { Chatbot } from './components/Chatbot';
+import { SpaceGame } from './components/SpaceGame';
+import { VoiceAssistant } from './components/VoiceAssistant';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <OrbitingPlanets />
       <FloatingLanguages />
       <FloatingAstronaut />
+      <Chatbot />
+      <SpaceGame />
+      <VoiceAssistant />
       
       {/* Hero Section */}
       <motion.header 
@@ -169,11 +175,10 @@ function App() {
             Ready to embark on an interstellar journey together? Drop me a message!
           </p>
           
-          {/* Wrap the button with an anchor tag to redirect to Instagram */}
           <a 
-            href="https://www.instagram.com/yanda.ee"  // Replace with your Instagram URL
-            target="_blank" // Open in a new tab
-            rel="noopener noreferrer" // Security best practice
+            href="https://www.instagram.com/yanda.ee"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <motion.button
               className="relative px-6 sm:px-8 py-3 bg-purple-600 rounded-full font-semibold hover:bg-purple-700 transition-colors group"
@@ -186,7 +191,6 @@ function App() {
               <span className="relative z-10">Send Message</span>
             </motion.button>
           </a>
-          
         </div>
       </motion.section>
     </div>

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const languages = [
   {
@@ -29,10 +30,18 @@ const languages = [
 ];
 
 export const FloatingLanguages = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
       {languages.map((lang, index) => {
-        const radius = Math.min(window.innerWidth, window.innerHeight) * 0.2;
+        const radius = Math.min(windowWidth * 0.4, 300);
         const angle = (index / languages.length) * Math.PI * 2;
         const x = Math.cos(angle) * radius;
         const y = Math.sin(angle) * radius;
